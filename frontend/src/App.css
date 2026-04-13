@@ -1,0 +1,43 @@
+:root {
+  --primary: #4338ca;
+  --primary-light: #e0e7ff;
+  --success: #059669;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-800: #1e293b;
+  --border: #e2e8f0;
+}
+
+body { margin: 0; font-family: 'Inter', sans-serif; background: var(--slate-50); }
+
+/* Layouts */
+.dashboard-container { display: flex; min-height: 100vh; }
+.sidebar { width: 260px; background: var(--slate-800); color: white; padding: 2rem 1rem; }
+.main-content { flex: 1; padding: 2rem; overflow-y: auto; }
+
+/* Components */
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+.stat-card { background: white; padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border); }
+
+.data-card { background: white; border-radius: 1rem; border: 1px solid var(--border); overflow: hidden; }
+.card-header { padding: 1.25rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+
+/* Form & Table */
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; padding: 1rem; background: var(--slate-100); font-size: 0.85rem; color: var(--slate-800); }
+td { padding: 1rem; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+.input-style { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 0.5rem; box-sizing: border-box; }
+
+.btn { padding: 0.75rem 1.5rem; border-radius: 0.5rem; border: none; font-weight: 600; cursor: pointer; transition: 0.2s; }
+.btn-primary { background: var(--primary); color: white; }
+.btn-success { background: var(--success); color: white; }
+
+/* POS Specific */
+.pos-layout { display: grid; grid-template-columns: 1fr 380px; gap: 2rem; }
+.product-item { background: white; border: 2px solid transparent; border-radius: 1rem; padding: 1rem; cursor: pointer; transition: 0.2s; }
+.product-item:hover { border-color: var(--primary); transform: translateY(-3px); }
